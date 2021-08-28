@@ -1,52 +1,46 @@
-# Prerequisites
-*.d
-
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
-
-# Linker output
-*.ilk
-*.map
-*.exp
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
-
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
-
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
-
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
-
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+#include<stdio.h>
+#include<conio.h>
+#include<dos.h>
+void main()
+{
+	int c,p,i,e;
+	clrscr();
+	print("\n VeerKhushal hotel:\n");
+	printf("\n..................\n");
+	printf("Menu of items");
+	printf("1.Noodles\t  2.Pizza\t  3.Chaumin\t  4.Rice\t  5.Burger\t");
+	printf("\nEnter the item to see price of food\n");
+	scanf("%d",&c);
+	switch(c)
+	{
+		case 1:
+		printf("Noodles\n per plate: 100");
+		break;
+		case 2:
+		printf("Pizza\n per plate: 150");
+		break;
+		case 3:
+		printf("Chaumin\n per plate: 80");
+		break;
+		case 4:
+		printf("Rice\n per plate: 120");
+		break;
+		case 5:
+		printf("Burger\n per plate: 140");
+		break;
+		default:
+		printf("enter valid food items");
+		break;
+	}
+	printf("\n press 5 key to call waiter\n");
+	scanf("%d",&p);
+	if(p==5)
+	{
+		for(i=0;i<=p;i++)
+		{
+		sound(50);
+		delay(2);
+		}
+	}
+getch();
+}
